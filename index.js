@@ -54,6 +54,10 @@ function generatePasswords(){
     else{
         use_numbers = false
     }
+    if (!use_alphabets && !use_numbers && !use_symbols){
+        window.alert("Cannot generate password. Select some characters")
+        exit()
+    }
     charactersToUse = getArrayToUse()
     console.log(typeof(charactersToUse))
     
