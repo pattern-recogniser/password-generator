@@ -8,8 +8,6 @@ const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","="
 
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-
-
 let password1 = document.getElementById("password-1")
 let password2 = document.getElementById("password-2")
 
@@ -20,6 +18,8 @@ let use_numbers = true
 let charactersToUse = []
 
 function getArrayToUse(){
+    // Returns an array of characters to use to generate the password
+    // based on the booleans from boxes that denote whether to use 
     alphabetsToUse = alphabets
     symbolsToUse = symbols
     numbersToUse = numbers
@@ -36,6 +36,10 @@ function getArrayToUse(){
 }
 
 function generatePasswords(){
+    // Function called on click of button
+    // Reads current state of checkboxes, 
+    // Calls function to ge the characters to use
+    // Generates 2 passwords from the array of characters
     if(document.getElementById("alphabet-checkbox").checked) {
         use_alphabets = true
       }
@@ -58,13 +62,13 @@ function generatePasswords(){
         window.alert("Cannot generate password. Select some characters")
         exit()
     }
-    charactersToUse = getArrayToUse()
-    console.log(typeof(charactersToUse))
-    
+    charactersToUse = getArrayToUse() 
     password1.innerText = generateOnePassword(charactersToUse)
     password2.innerText = generateOnePassword(charactersToUse)
 }
 function generateOnePassword(charactersToUse){
+    // Given an array of characters to use
+    // Returns a string of random characters
     
     let generatedPassword = ""
     for(let i = 0; i <15; i++){
