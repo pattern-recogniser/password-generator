@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<head>
-    <link href="index.css" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Karla:wght@300;600;750&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="container-div">
-        <h1> Generate a <br/> <span id="highlighted-span"> random password</span> </h1>
-        <h4> Never use an insecure password again. </h4>
-        <!-- Rounded switch -->
-        <div class="switch-wrapper">
-            <label class="switch">
-                <input type="checkbox" id="alphabet-checkbox"
-                checked="true">
-                <span class="slider round"></span>
-            </label>
-            <p> Use alphabets</p>
-        </div>
-        <div class="switch-wrapper">
-            <label class="switch">
-                <input type="checkbox" id="symbol-checkbox"
-                checked="true">
-                <span class="slider round"></span>
-            </label>
-            <p> Use symbols</p>
-        </div>
-        <div class="switch-wrapper">
-            <label class="switch">
-                <input type="checkbox" id="number-checkbox"
-                checked="true">
-                <span class="slider round"></span>
-            </label>
-            <p> Use numbers</p>
-        </div>
-        <button id="generate-btn" onclick="generatePasswords()"> Generate passwords </button>
-        <div id="passwords-container">
-            <div class="password_div">
-                <p id="password-1"> </p>
+<html>
+    <head>
+        <link href="index.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Karla:wght@300;600;750&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Main container div for everything -->
+        <div id="container-div">
+            <h1> Generate a <br/> <span id="highlighted-span"> random password</span> </h1>
+            <h4> Never use an insecure password again. </h4>
+            <!-- Rounded switch wrapper div for alphabet-->
+            <div class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" id="alphabet-checkbox"
+                    checked="true">
+                    <span class="slider round"></span>
+                </label>
+                <p> Use alphabets</p>
             </div>
-            <div class="password_div"> 
-                <p id="password-2"> </p>
-            </div>         
+            <!-- Rounded switch wrapper div for symbol-->
+            <div class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" id="symbol-checkbox"
+                    checked="true">
+                    <span class="slider round"></span>
+                </label>
+                <p> Use symbols</p>
+            </div>
+            <!-- Rounded switch wrapper div for numbers-->
+            <div class="switch-wrapper">
+                <label class="switch">
+                    <input type="checkbox" id="number-checkbox"
+                    checked="true">
+                    <span class="slider round"></span>
+                </label>
+                <p> Use numbers</p>
+            </div>
+            <button id="generate-btn" onclick="generatePasswords()"> Generate passwords </button>
+            <div id="passwords-container">
+                <div class="password_div">
+                    <p id="password-1"> </p>
+                </div>
+                <div class="password_div"> 
+                    <p id="password-2"> </p>
+                </div>         
+            </div>
         </div>
-    </div>
-    <script src="index.js"></script>
-</body>
+        <script src="index.js"></script>
+    </body>
+</html>
